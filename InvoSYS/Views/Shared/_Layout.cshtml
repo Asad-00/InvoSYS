@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - InvoSYS Pvt Ltd</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+     @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+
+<style>
+
+.navbar-icon-top .navbar-nav .nav-link > .fa {
+  position: relative;
+  width: 36px;
+  font-size: 24px;
+}
+
+.navbar-icon-top .navbar-nav .nav-link > .fa > .badge {
+  font-size: 0.75rem;
+  position: absolute;
+  right: 0;
+  font-family: sans-serif;
+}
+
+.navbar-icon-top .navbar-nav .nav-link > .fa {
+  top: 3px;
+  line-height: 12px;
+}
+
+.navbar-icon-top .navbar-nav .nav-link > .fa > .badge {
+  top: -10px;
+}
+.navbar-nav li{
+    font-size:16px;
+    margin-inline:5px;
+}
+ 
+</style>
+
+<body>
+    @*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+            <div class="container">
+                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Product", "DisplayProduct", "Product", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Purchased Items", "DisplayPurchase", "Purchase", new { area = "" }, new { @class = "nav-link" })</li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </nav>*@
+
+    @*New Nav*@
+   
+
+    <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
+        @*<a class="navbar-brand" href="#">Navbar</a>*@
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li style="margin-left:510px" class="nav-item active">
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-home"></i>
+                <li style="margin-left:-25px;">@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                </a>
+                <br />
+                </li>
+                <li class="nav-item active">
+                    <i style="color:white; margin-top:13px" class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <li>@Html.ActionLink("Product", "DisplayProduct", "Product", new { area = "" }, new { @class = "nav-link" })</li>
+
+                </a>
+                <br />
+
+                </li>
+                <li class="nav-item active">
+                    <i style="color:white; margin-top:13px" class="fa fa-credit-card-alt" aria-hidden="true"></i>
+                <li>@Html.ActionLink("Purchased Items", "DisplayPurchase", "Purchase", new { area = "" }, new { @class = "nav-link" })</li>
+
+                </a>
+                <br />
+
+                </li>
+                <li class="nav-item active">
+                    <i style="color:white; margin-top:13px;" class="fa fa-line-chart" aria-hidden="true"></i>
+                <li>@Html.ActionLink("Sales", "DisplaySale", "Sale", new { area = "" }, new { @class = "nav-link" })</li>
+
+                </a>
+                </li>
+                <li style="margin-left:370px;" class="d-inline-flex my-2 my-lg-0">
+                    @*<i class="fa fa-line-chart"></i>*@
+<li style="color:white">@Html.ActionLink("Login", "Login", "Security", new { area = "" }, new { @class = "nav-link" })</li>
+                @*<button style="margin-right:40px" class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>*@
+                </li>
+            </ul>
+         
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container body-content">
+        @RenderBody()
+        <footer style="margin-top:800px;color:aliceblue">
+            <p>&copy; @DateTime.Now.Year - InvoSYS </p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
