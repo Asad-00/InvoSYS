@@ -1,0 +1,118 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+
+<h2>InvoSYS</h2>
+
+@*<div id="login-form">
+    <section class="vh-100" style="background-color: #508bfc;">
+        <div class="card shadow-2-strong" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+
+                <div>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" />
+                </div>
+
+                <div class="form-outline mb-4">
+                    <input type="password" id="typePasswordX-2" class="form-control form-control-lg" />
+                    <label class="form-label" for="typePasswordX-2">Password</label>
+                </div>
+
+                <div class="">
+                    <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+                </div>
+                <div id="error-message" style="display: none; color: red;"></div>
+                <hr class="my-4">
+
+                <button class="btn btn-lg btn-block btn-primary" style="background-color: #dd4b39;"
+                        type="submit">
+                    <i class="fab fa-google me-2"></i> Sign in with google
+                </button>
+                <button class="btn btn-lg btn-block btn-primary mb-2" style="background-color: #3b5998;"
+                        type="submit">
+                    <i class="fab fa-facebook-f me-2"></i>Sign in with facebook
+                </button>
+
+            </div>
+        </div>
+    </section>
+</div>*@
+
+<section class="vh-100" style="background-color: #f7fcff;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+
+                        <h3 class="mb-5">Login</h3>
+                        <div class="d-inline-block">
+                            <div class="form-outline mb-4">
+                                <label for="username">UserName <input type="email" id="typeEmailX-2" class="form-control form-control-lg" /></label>
+                            </div>
+
+                            <div class="form-outline mb-4">
+                                <label for="password">Password <input type="password" id="typePasswordX-2" class="form-control form-control-lg" /></label>
+                            </div>
+                        </div>
+                        <!-- Checkbox -->
+                        <div class="form-check d-flex justify-content-start mb-4">
+                            <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
+                            <label class="form-check-label" for="form1Example3"> Remember password </label>
+                        </div>
+
+                        <button class="btn btn-primary btn-lg btn-block" onclick="login()" type="submit">Login</button>
+ 
+                        <hr class="my-4">
+
+                        <button class="btn btn-lg btn-block btn-primary" style="background-color: #dd4b39;"
+                                type="submit">
+                            <i class="fab fa-google me-2"></i> Sign in with google
+                        </button>
+                        <button class="btn btn-lg btn-block btn-primary mb-2" style="background-color: #3b5998;"
+                                type="submit">
+                            <i class="fab fa-facebook-f me-2"></i>Sign in with facebook
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<script>
+    function login() {
+        var username = document.getElementById("typeEmailX-2").value;
+        var password = document.getElementById("typePasswordX-2").value;
+
+        // Perform your login logic here, such as AJAX call to the server
+
+        // For demonstration purposes, check if username and password are not empty
+
+        if (username == "admin" && password == "123") {
+            alert("Login Succesful");
+            return true;
+        }
+        else {
+            alert("Login Unsuccessful");
+            return false;
+        }
+            }
+</script>
+
+<style>
+    #login-form {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+        #login-form div {
+            margin-bottom: 10px;
+        }
+</style>
